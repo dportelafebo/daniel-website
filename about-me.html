@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Daniel's Website</title>
-    <link
-      rel="icon"
-      type="img/png"
-      href="/Users/dportela/Desktop/minimalist-red-logo.png"
-    />
+    <link rel="icon" type="img/png" href="imgs/minimalist-red-logo.png" />
     <link rel="stylesheet" href="css/main-style.css" />
   </head>
   <body>
@@ -23,7 +19,30 @@
     </header>
     <h1 style="color: #008000">About Me</h1>
     <p>Hey! I'm Daniel!!</p>
-    <img src="imgs/dancing-skeletons.gif" alt="dancing-skeletons" width="50%" />
+    <img
+      src="imgs/dancing-skeletons.gif"
+      alt="dancing-skeletons"
+      width="50%"
+      onclick="playAudio()"
+    />
+    <audio id="skelly-audio">
+      <source src="audio/spooky-scary-skeletons.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+      var isplaying = false;
+
+      function playAudio() {
+        if (!isplaying) {
+          var audio = document.getElementById("skelly-audio");
+          audio.play();
+          isplaying = true;
+        } else {
+          var audio = document.getElementById("skelly-audio");
+          audio.pause();
+          isplaying = false;
+        }
+      }
+    </script>
     <h2>Early Life</h2>
     <details>
       I was born in Puerto Rico and lived there until I was 18! <br />Fun fact:
