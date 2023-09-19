@@ -9,74 +9,93 @@
   <body>
     <header>
       <h1 style="color: #1d98d5">About Me</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li><a href="about-me.html">About Me</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
+
+    <section>
+      <p>Hey! I'm Daniel!!</p>
+      <img
+        src="imgs/dancing-skeletons.gif"
+        alt="dancing-skeletons"
+        width="50%"
+        onclick="playAudio()"
+      />
+      <audio id="skelly-audio">
+        <source src="audio/spooky-scary-skeletons.mp3" type="audio/mpeg" />
+      </audio>
+      <script>
+        var isplaying = false;
+
+        function playAudio() {
+          if (!isplaying) {
+            var audio = document.getElementById("skelly-audio");
+            audio.play();
+            isplaying = true;
+          } else {
+            var audio = document.getElementById("skelly-audio");
+            audio.pause();
+            isplaying = false;
+          }
+        }
+      </script>
+    </section>
+
+    <section>
+      <h2>Early Life</h2>
+      <details>
+        <summary>Pueto Rico</summary>
+        <p>I was born in Puerto Rico and lived there until I was 18!</p>
+        <p>Fun fact: I was neighbors with my aunt!</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <details>
+        <summary>Colegio San José</summary>
+        <p>I went to high school at Colegio San José.</p>
+      </details>
+      <details>
+        <summary>Massachusets Institute of Technology</summary>
+        <p>
+          I'm currently a rising sophmore at MIT studying Computer Science and
+          Management.
+        </p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Interests</h2>
+      <ul>
+        <li>Computer Science</li>
+        <li>Artifical Intelligence</li>
+        <li>Business</li>
+        <li>Music</li>
+        <li>Video Games</li>
+        <li>Learning</li>
+        <li>Philosophy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Resume and LinkedIn</h2>
       <ul>
         <li>
-          <a href="index.html">Home</a>
+          <a href="Portela_Daniel_Resume.pdf">Resume</a>
         </li>
-        <li><a href="about-me.html">About Me</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/daniel-portela-febo/"
+            >LinkedIn</a
+          >
+        </li>
       </ul>
-    </nav>
-    <p>Hey! I'm Daniel!!</p>
-    <img
-      src="imgs/dancing-skeletons.gif"
-      alt="dancing-skeletons"
-      width="50%"
-      onclick="playAudio()"
-    />
-    <audio id="skelly-audio">
-      <source src="audio/spooky-scary-skeletons.mp3" type="audio/mpeg" />
-    </audio>
-    <script>
-      var isplaying = false;
-
-      function playAudio() {
-        if (!isplaying) {
-          var audio = document.getElementById("skelly-audio");
-          audio.play();
-          isplaying = true;
-        } else {
-          var audio = document.getElementById("skelly-audio");
-          audio.pause();
-          isplaying = false;
-        }
-      }
-    </script>
-    <h2>Early Life</h2>
-    <details>
-      I was born in Puerto Rico and lived there until I was 18! <br />Fun fact:
-      I was neighbors with my aunt!
-      <summary>Pueto Rico</summary>
-    </details>
-    <h2>Education</h2>
-    <details>
-      I went to high school at Colegio San José.
-      <summary>Colegio San José</summary>
-    </details>
-    <details>
-      I'm currently a rising sophmore at MIT studying Computer Science and
-      Management.
-      <summary>Massachusets Institute of Technology</summary>
-    </details>
-    <h2>Interests</h2>
-    <ul>
-      <li>Computer Science</li>
-      <li>Artifical Intelligence</li>
-      <li>Business</li>
-      <li>Music</li>
-      <li>Video Games</li>
-      <li>Learning</li>
-      <li>Philosophy</li>
-    </ul>
-    <h2>Resume and LinkedIn</h2>
-    <ul>
-      <li>
-        <a href="Portela_Daniel_Resume.pdf">Resume</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/daniel-portela-febo/">LinkedIn</a>
-      </li>
-    </ul>
+    </section>
   </body>
 </html>

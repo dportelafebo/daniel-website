@@ -5,35 +5,60 @@
 	<title>Daniel's Website</title>
 	<link rel="icon" type="img/png" href="imgs/minimalist-red-logo.png">
 	<link rel="stylesheet" href="css/main-style.css">
+	<script>
+		!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+		posthog.init('phc_xDYU2oyIn7rQ9txtFBSIuGfmJRnpyAXdKrKOG495VTy',{api_host:'https://app.posthog.com'})
+
+		posthog.capture("Page View", {
+			page_name: "Home Page",
+			page_url: window.location.href,
+		});
+
+		// Track pageleave on page unload
+		window.addEventListener('beforeunload', function() {
+			posthog.capture('Page Leave', {
+			page_name: 'Your Page Name',
+			page_url: window.location.href
+			});
+		});
+	</script>
+
 </head>
 <body>
 	<header>
 		<h1 style="color: #b22222">Daniel's Website</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About Me</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about-me.html">About Me</a></li>
-		</ul>
-	</nav>
-	<h4>Reasons Why Daniel is Great</h3>
-	<ol>
-		<li>He is amazing.</li>
-		<li>He is cool.</li>
-		<li>He is great.</li>
-		<li>He is awesome.</li>
-		<li>He is the best.</li>
-		<li>He is his aunt's (Frances) nephew.</li>
-		<li>He was not coerced to write the above statement.</li>
-	</ol>
-	<br>
-	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click Me</a>
-	<h2>Here is a picture of my dog:</h2>
-	<figure>
-		<img src="imgs/my-dog.png" alt="dog" width="50%">
-	</figure>
-	<h2>Here is boygenius!!</h2>
-	<video width="50%" controls>
-		<source src="imgs/not-strong-enough.mp4" type="video/mp4">
+
+	<section>
+		<h4>Fun Facts About Me!</h3>
+			<ol>
+				<li>I'm a bit obsessed with the color red.</li>
+				<li>I've just recently hit v4 bouldering routes!</li>
+				<li>I've read a combined 400+ hours of VRMMORPG/reincarnation webnovels.</li>
+				<li>I have a different pair of glasses for seeing up close and far away because I refuse to get bifocals.</li>
+				<li>I've got about 4800 liked songs on Spotify</li>
+			</ol>
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click Me</a>
+	</section>
+
+	<section>
+		<h2>Here is a picture of my dog:</h2>
+		<figure>
+			<img src="imgs/my-dog.png" alt="dog" width="50%">
+		</figure>
+	</section>
+	
+	<section>
+		<h2>Here is boygenius!!</h2>
+		<video width="50%" controls>
+			<source src="imgs/not-strong-enough.mp4" type="video/mp4">
+	</section>
+	
 </body>
 </html>
